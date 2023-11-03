@@ -4,9 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Js events</title>
 </head>
+<style>
+
+#btn{
+    padding: 15px 20px 15px 10px;
+    background-color: red;
+    color:white;
+    border-radius: 14px;
+    text-align: center;
+}
+
+h1{
+    color: green;
+}
+p{
+    color: yellowgreen;
+}
+</style>
+
 <body>
     <h1>Hello World..</h1>
+    <p id = "para">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur ea 
+        voluptas nostrum accusantium veritatis tempore ducimus voluptate blanditiis deserunt pariatur assumenda esse, quam sit distinctio. 
+        Optio ducimus expedita porro fugit.
+    </p>
+
+    <!-- Event handler in js is a function that gets executed when certain events occurs -->
+    <button id = "btn" onclick="toggle()"> Click me</button>  
 </body>
-</html>
+
+<script>
+    
+const arr = [1,2,3];
+console.log(arr);
+    // event listener -> is a function that listens for a specific events
+    let para = document.getElementById('para');
+    para.addEventListener('mouseover', function run(){
+        console.log('mouse hovering');
+    })
+
+    para.addEventListener('mouseout', function out(){
+        console.log("mouse out of para");
+    })
+
+    let id = document.getElementById('btn');
+    id.addEventListener('click', function clicked(){
+        console.log("mouse clicked");
+    })
+
+    function toggle(){
+        let btn = document.getElementById('btn');
+        let para = document.getElementById('para');
+        if(para.style.display != 'none'){
+            para.style.display = 'none';
+        }
+        else{
+            para.style.display = 'block';
+        }
+    }
+
+</script>
+
+</html>  
