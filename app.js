@@ -101,3 +101,7 @@ console.log(store(10));   // here we can access values of a and c variables
 
 const arr = [1,2,3];
 console.log(arr);
+
+for(let i = 0; i<3; i++){
+    console.log(arr[i]);
+}
